@@ -1,0 +1,61 @@
+{
+    "sequences": [
+        {
+            "id": 1,
+            "nom": "Gène de fluorescence GFP",
+            "sequence": "ATGGCTAGCAAAGGAGAAGAACTTTTCACTGGAGTTGTCCCAATTCTTGTTGAATTAGATGGTGATGTTAATGGGCACAAATTTTCTGTCAGTGGAGAGGGTGAAGGTGATGCAACATACGGAAAACTTACCCTTAAATTTATTTGCACTACTGGAAAACTACCTGTTCCATGGCCAACACTTGTCACTACTTTC",
+            "favori": true,
+            "date_creation": "2026-02-26 21:55:13",
+            "description": "Green Fluorescent Protein"
+        },
+        {
+            "id": 2,
+            "nom": "Résistance à l'ampicilline",
+            "sequence": "ATGAGTATTCAACATTTCCGTGTCGCCCTTATTCCCTTTTTTGCGGCATTTTGCCTTCCTGTTTTTGCTCACCCAGAAACGCTGGTGAAAGTAAAAGATGCTGAAGATCAGTTGGGTGCACGAGTGGGTTACATCGAACTGGATCTCAACAGCGGTAAGATCCTTGAGAGTTTTCGCCCCGAAGAACGTTTTCCAATGATGAGCACTTTTAAAGTTCTGCTATGTGGCGCGGTATTATCCCGTATTGACGCCGGGCAAGAGCAACTCGGTCGCCGCATACACTATTCTCAGAATGACTTGGTTGAGTACTCACCAGTCACAGAAAAGCATCTTACGGATGGCATGACAGTAAGAGAATTATGCAGTGCTGCCATAACCATGAGTGATAACACTGCGGCCAACTTACTTCTGACAACGATCGGAGGACCGAAGGAGCTAACCGCTTTTTTGCACAACATGGGGGATCATGTAACTCGCCTTGATCGTTGGGAACCGGAGCTGAATGAAGCCATACCAAACGACGAGCGTGACACCACGATGCCTGTAGCAATGGCAACAACGTTGCGCAAACTATTAACTGGCGAACTACTTACTCTAGCTTCCCGGCAACAATTAATAGACTGGATGGAGGCGGATAAAGTTGCAGGACCACTTCTGCGCTCGGCCCTTCCGGCTGGCTGGTTTATTGCTGATAAATCTGGAGCCGGTGAGCGTGGGTCTCGCGGTATCATTGCAGCACTGGGGCCAGATGGTAAGCCCTCCCGTATCGTAGTTATCTACACGACGGGGAGTCAGGCAACTATGGATGAACGAAATAGACAGATCGCTGAGATAGGTGCCTCACTGATTAAGCATTGGTAA",
+            "favori": false,
+            "date_creation": "2026-02-26 21:55:13",
+            "description": "Gène de résistance ampicilline"
+        },
+        {
+            "id": 3,
+            "nom": "Séquence de contrôle",
+            "sequence": "ATGCGTACGTAGCTAGCTAGC",
+            "favori": false,
+            "date_creation": "2026-02-26 21:55:13",
+            "description": "Séquence standard"
+        }
+    ],
+    "notes": [
+        {
+            "id": "69a0cdbf27af1",
+            "titre": "Le devoir de monsieur ",
+            "contenu": "bjhhfbdbgdhjks",
+            "sequence_id": "",
+            "tags": "",
+            "important": 1,
+            "date_creation": "2026-02-26 22:48:31"
+        }
+    ],
+    "journal": [
+        {
+            "timestamp": "2026-02-26 22:48:31",
+            "type": "note",
+            "description": "Nouvelle note: Le devoir de monsieur ",
+            "succes": true
+        }
+    ],
+    "projets": [
+        {
+            "id": 1,
+            "nom": "Étude de la fluorescence",
+            "avancement": 75,
+            "statut": "En cours",
+            "date_debut": "2026-02-26"
+        }
+    ],
+    "statistiques": {
+        "total_sequences": 3,
+        "syntheses_reussies": 0,
+        "projets_actifs": 1
+    }
+}

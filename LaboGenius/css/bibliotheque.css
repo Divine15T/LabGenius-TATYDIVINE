@@ -1,0 +1,285 @@
+/* ===STYLES BIBLIOTHÈQUE - LABGENIUS=== */
+
+.bibliotheque-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.page-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+/* ---MESSAGES--- */
+.message {
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.message.success {
+    background: rgba(0, 255, 157, 0.1);
+    border: 1px solid var(--success);
+    color: var(--success);
+}
+
+.message.error {
+    background: rgba(255, 59, 111, 0.1);
+    border: 1px solid var(--error);
+    color: var(--error);
+}
+
+/* ---FILTRES--- */
+.filters-bar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.filter-btn {
+    padding: 0.6rem 1.5rem;
+    background: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+}
+
+.filter-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: var(--hover-bg);
+}
+
+.filter-btn.active {
+    background: var(--primary-color);
+    color: #000;
+    border-color: var(--primary-color);
+    font-weight: bold;
+}
+
+/* ---GRILLE--- */
+.sequences-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 1.5rem;
+}
+
+/* ---CARTE SÉQUENCE--- */
+.sequence-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: all 0.2s;
+}
+
+.sequence-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-glow);
+}
+
+.sequence-card.favori {
+    border-color: var(--warning);
+}
+
+.card-header {
+    background: var(--bg-secondary);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.card-title {
+    margin: 0;
+    font-size: 1.1rem;
+    color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-favori {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0.2rem;
+    transition: all 0.2s;
+}
+
+.btn-favori:hover {
+    transform: scale(1.2);
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+/* ---PRÉVISUALISATION--- */
+.sequence-preview {
+    background: var(--bg-input);
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.2rem;
+    align-items: center;
+    min-height: 60px;
+}
+
+.base-mini {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: white;
+    transition: all 0.2s;
+}
+
+.base-mini:hover {
+    transform: scale(1.2);
+    box-shadow: var(--shadow-glow);
+}
+
+.preview-more {
+    color: var(--text-muted);
+    margin-left: 0.2rem;
+    font-size: 0.9rem;
+}
+
+/* ---MÉTADONNÉES--- */
+.card-meta {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 0.5rem;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}
+
+.card-meta span {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.card-description {
+    background: var(--bg-input);
+    padding: 0.5rem;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+    border-left: 2px solid var(--primary-color);
+}
+
+/* ---ACTIONS--- */
+.card-actions {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.btn-action {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.3rem;
+}
+
+.btn-edit {
+    background: var(--primary-color);
+    color: #000;
+}
+
+.btn-synthese {
+    background: transparent;
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.btn-edit:hover,
+.btn-synthese:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+.delete-form {
+    margin: 0;
+}
+
+.btn-delete {
+    background: transparent;
+    border: 1px solid var(--error);
+    border-radius: 6px;
+    color: var(--error);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-delete:hover {
+    background: rgba(255, 59, 111, 0.1);
+    transform: translateY(-2px);
+}
+
+/* ---ÉTATS VIDES--- */
+.empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 4rem;
+    color: var(--text-muted);
+}
+
+.empty-state i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.empty-state p {
+    font-size: 1.2rem;
+}
+
+/* ---MEDIA QUERIES--- */
+@media (max-width: 768px) {
+    .sequences-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .filters-bar {
+        flex-direction: column;
+    }
+    
+    .card-actions {
+        flex-direction: column;
+    }
+}

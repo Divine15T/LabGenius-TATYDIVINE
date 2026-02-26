@@ -1,0 +1,321 @@
+/* ===STYLES SÉQUENCEUR - LABGENIUS=== */
+
+.sequenceur-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.page-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+.placeholder {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 3rem;
+    text-align: center;
+    color: var(--text-muted);
+    animation: fadeIn 0.5s ease-out;
+}
+
+.placeholder p {
+    font-size: 1.2rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+/* ===STYLES SÉQUENCEUR - SUITE=== */
+
+/* ---BARRE D'OUTILS--- */
+.toolbar {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.btn-tool {
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+}
+
+.btn-tool:hover {
+    border-color: var(--primary-color);
+    background: var(--hover-bg);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+.btn-tool.primary {
+    background: var(--primary-color);
+    color: #000;
+    border-color: var(--primary-color);
+}
+
+/* ---OPTIONS DE VUE--- */
+.view-options {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    background: var(--bg-input);
+    padding: 0.3rem;
+    border-radius: 8px;
+}
+
+.view-option {
+    flex: 1;
+    background: transparent;
+    border: none;
+    padding: 0.6rem;
+    color: var(--text-secondary);
+    cursor: pointer;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+}
+
+.view-option:hover {
+    color: var(--primary-color);
+}
+
+.view-option.active {
+    background: var(--bg-card);
+    color: var(--primary-color);
+    box-shadow: 0 2px 8px rgba(0, 255, 157, 0.2);
+}
+
+/* ---VUES SÉQUENCE--- */
+.sequence-texte {
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    font-family: monospace;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    word-break: break-all;
+    margin-bottom: 1rem;
+}
+
+.sequence-graphique {
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+.bases-graphiques {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.3rem;
+    justify-content: center;
+}
+
+.base-graphique {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    border: 1px solid transparent;
+}
+
+.base-graphique:hover {
+    transform: scale(1.1);
+    box-shadow: var(--shadow-glow);
+    border-color: var(--primary-color);
+}
+
+.base-graphique.base-a { background: #ff3b6f; color: white; }
+.base-graphique.base-t { background: #00fff9; color: black; }
+.base-graphique.base-g { background: #00ff9d; color: black; }
+.base-graphique.base-c { background: #ffd700; color: black; }
+
+.base-graphique .lettre {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.base-graphique .position {
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+/* ---BARRE D'OUTILS ÉDITION--- */
+.editor-toolbar {
+    display: flex;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.editor-toolbar .btn-tool {
+    flex: 1;
+}
+
+/* ---HISTORIQUE--- */
+.history-panel {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin-top: 2rem;
+}
+
+.panel-title {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+.history-list {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.empty-state {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-muted);
+}
+
+.empty-state i {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    opacity: 0.5;
+}
+/* ---MODAL--- */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.8);
+    z-index: 2000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background: var(--bg-card);
+    width: 500px;
+    max-width: 90%;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 1px solid var(--primary-color);
+    position: relative;
+    animation: slideDown 0.3s;
+}
+
+.modal-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+
+.modal-close:hover {
+    color: var(--error);
+}
+
+.modal h3 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+/* ---FORMULAIRES--- */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text-secondary);
+}
+
+.form-input {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+/* ---HISTORIQUE--- */
+.history-item {
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    gap: 1rem;
+}
+
+.history-time {
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    min-width: 70px;
+}
+
+.history-action {
+    color: var(--text-secondary);
+    flex: 1;
+}
+
+/* ---ANIMATIONS--- */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
