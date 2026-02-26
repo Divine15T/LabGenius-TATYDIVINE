@@ -1,8 +1,6 @@
 # LabGenius-TATYDIVINE
 Simulateur de laboratoire
-# LabGenius - Plateforme de Laboratoire Génétique
-
-Version 1.0.0 | PHP 7.4+ | Licence MIT
+# LabGenius - Plateforme de Laboratoire Génétiqu
 
 ## Description
 
@@ -127,10 +125,3 @@ Le fichier `data/data.json` est cree automatiquement par la classe Database lors
 - JSON pour le stockage des donnees
 - Git pour le versionnement
 
-## Auteurs
-
-- Taty Divine Grace - Developpeur principal
-
-
-
-Projet etudiant - Developpement Web 2025
