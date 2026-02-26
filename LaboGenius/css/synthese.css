@@ -1,0 +1,244 @@
+/* ===STYLES SYNTHÈSE - LABGENIUS=== */
+
+.synthese-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.page-title {
+    color: var(--primary-color);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+}
+
+/* ---GRILLE--- */
+.synthese-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+/* ---CARTES--- */
+.card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.2s;
+}
+
+.card:hover {
+    box-shadow: var(--shadow-glow);
+}
+
+.card-title {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.5rem;
+}
+
+/* ---FORMULAIRES--- */
+.synthese-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.form-input,
+.form-select {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.form-input:focus,
+.form-select:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-glow);
+}
+
+.sequence-textarea {
+    font-family: monospace;
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* ---BOUTONS--- */
+.btn-primary {
+    background: var(--primary-color);
+    color: #000;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: all 0.2s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+}
+
+.btn-primary.btn-block {
+    width: 100%;
+}
+
+/* ---APERÇU SÉQUENCE--- */
+.sequence-preview {
+    background: var(--bg-input);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.preview-label {
+    color: var(--text-secondary);
+    margin-bottom: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.preview-sequence {
+    font-family: monospace;
+    font-size: 1.1rem;
+    word-break: break-all;
+    line-height: 1.8;
+}
+
+/* ---PROGRESSION--- */
+.progress-section {
+    margin: 1.5rem 0;
+}
+
+.progress-header {
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-secondary);
+    margin-bottom: 0.5rem;
+    font-size: 0.95rem;
+}
+
+.progress-container {
+    background: var(--bg-input);
+    height: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    width: 0;
+    transition: width 0.1s linear;
+}
+
+/* ---RÉSULTATS--- */
+.resultat-container {
+    margin-top: 1.5rem;
+}
+
+.resultat-card {
+    padding: 1.5rem;
+    border-radius: 8px;
+    animation: fadeIn 0.3s ease-out;
+}
+
+.resultat-card.success {
+    background: rgba(0, 255, 157, 0.1);
+    border: 1px solid var(--success);
+}
+
+.resultat-card.error {
+    background: rgba(255, 59, 111, 0.1);
+    border: 1px solid var(--error);
+}
+
+/* ---ÉTATS VIDES--- */
+.empty-state {
+    text-align: center;
+    padding: 3rem;
+    color: var(--text-muted);
+}
+
+.empty-state i {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.empty-state-sub {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin-top: 0.5rem;
+}
+
+/* ---ANIMATIONS--- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ---MEDIA QUERIES--- */
+@media (max-width: 1024px) {
+    .synthese-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .synthese-main {
+        padding: 1rem;
+    }
+    
+    .page-title {
+        font-size: 1.5rem;
+    }
+}
